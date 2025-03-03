@@ -27,7 +27,7 @@ export function WebSocketProvider({ children }: { children: ReactNode }) {
   const [messages, setMessages] = useState<Message[]>([]);
 
   useEffect(() => {
-    const websocket = new WebSocket("ws://localhost:3000");
+    const websocket = new WebSocket("wss://chat-2-otss.onrender.com/");
 
     websocket.onopen = () => {
       console.log("Connected to WebSocket");
