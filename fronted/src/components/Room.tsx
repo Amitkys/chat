@@ -83,11 +83,11 @@ export default function ChatRoom() {
       <header className="border-b bg-card p-4">
         <div className="container mx-auto flex justify-between items-center">
           <div>
-            <h1 className="text-sm font-bold">Room: {roomId}</h1>
+            <h1 className="text-base font-bold hidden lg:block">Room: {roomId}</h1>
             <div className="flex items-center gap-2">
               <Users className="h-4 w-4 text-muted-foreground" />
               <span className="text-sm text-muted-foreground">
-                {userCount} {userCount === 1 ? "user" : "users"} online
+                {userCount} 
               </span>
             </div>
           </div>
