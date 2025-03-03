@@ -34,6 +34,14 @@ export function WebSocketProvider({ children }: { children: ReactNode }) {
       setWs(websocket);
     };
 
+     // Format the timestamp to show hours:minutes AM/PM
+        const now = new Date();
+        const formattedTime = now.toLocaleTimeString('en-US', { 
+          hour: '2-digit', 
+          minute: '2-digit',
+          hour12: true 
+        });
+
     websocket.onmessage = (event) => {
       const data = JSON.parse(event.data);
       console.log("WebSocket Message:", data);
@@ -47,7 +55,7 @@ export function WebSocketProvider({ children }: { children: ReactNode }) {
             roomId: data.roomId,
             username: data.username,
             message: data.message,
-            timestamp: new Date().toLocaleTimeString(),
+            timestamp: formattedTime,
           },
         ]);
       }
