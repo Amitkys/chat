@@ -78,7 +78,7 @@ export default function ChatRoom() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen pt-[74px]">
+    <div className="flex flex-col min-h-screen">
       {/* Header */}
       <header className="fixed top-0 left-0 w-full z-10 border-b bg-card p-4">
         <div className="container mx-auto flex justify-between items-center">
@@ -118,10 +118,9 @@ export default function ChatRoom() {
         </div>
       </header>
 
-
-      {/* Chat Area */}
-      <div className="flex-1 overflow-y-auto p-4 pb-10">
-        <div className="container mx-auto max-w-4xl space-y-4">
+      {/* Chat Area - Fixed to hide scrollbar but maintain scrolling functionality */}
+       <div className="flex-1 overflow-y-auto p-4  mt-32 mb-16 lg:mt-20 lg:mb-16"> 
+        <div className="container mx-auto max-w-4xl space-y-4 pt-4">
           {messages.map((message, index) => (
             <div
               key={index}
@@ -176,6 +175,16 @@ export default function ChatRoom() {
         </div>
       </div>
 
+      {/* CSS to hide scrollbar across different browsers */}
+      <style>{`
+        .scrollbar-hide {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;  /* Chrome, Safari and Opera */
+        }
+      `}</style>
     </div>
   );
 }
