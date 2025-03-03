@@ -1,22 +1,19 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "dist/index.js",
-  "scripts": {
+  "main": "index.js",
+"scripts": {
     "dev": "tsc -b --watch && node dist/index.js",
     "build": "tsc -b",
-    "start": "node dist/index.js",
-    "postinstall": "bun install --frozen-lockfile"
+    "start": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "ws": "^8.18.1" 
-  },
-  "devDependencies": {
-    "@types/ws": "^8.5.14", 
-    "typescript": "^5.8.2"  
+    "@types/ws": "^8.5.14",
+    "typescript": "^5.8.2",
+    "ws": "^8.18.1"
   }
 }
