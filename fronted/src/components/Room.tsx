@@ -78,9 +78,9 @@ export default function ChatRoom() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen pt-[74px]">
       {/* Header */}
-      <header className="border-b bg-card p-4">
+      <header className="fixed top-0 left-0 w-full z-10 border-b bg-card p-4">
         <div className="container mx-auto flex justify-between items-center">
           <div>
             <h1 className="text-base font-bold hidden lg:block">Room: {roomId}</h1>
@@ -117,6 +117,7 @@ export default function ChatRoom() {
           </div>
         </div>
       </header>
+
 
       {/* Chat Area */}
       <div className="flex-1 overflow-y-auto p-4 pb-10">
