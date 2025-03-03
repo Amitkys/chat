@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsc -b && node dist/index.js",
+    "dev": "tsc -b --watch && node dist/index.js",
     "build": "tsc -b",
-    "start": "dist/index.js"
+    "start": "node dist/index.js",
+    "postinstall": "bun install --frozen-lockfile"
   },
   "keywords": [],
   "author": "",
